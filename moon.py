@@ -29,12 +29,12 @@ async def start_(client: Client, message: Message):
     f"""● **Salam 👋** {message.from_user.mention}\n\n**» Mən Mahnı Yükləmə botuyam isdədiyin mahnını yükləyə bilərəm**\n\n**✅ kömək üçün** /komek **komutuna bas**""",
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇹🇷 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🇹🇷', url=f'http://t.me/StarSongBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/MusiqiYuklemeBot?startgroup=new}'),
                   ],[
-                    InlineKeyboardButton('✅ 𝖣𝖾𝗌𝗍𝖾𝗄 ', url=f'https://t.me/{Config.GROUP}'),
+                    InlineKeyboardButton('✅ Dəsdək ', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅 ', url=f'https://t.me/{Config.PLAYLIST_NAME}')
                   ],[
-                    InlineKeyboardButton('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', url=f'https://github.com/MehmetAtes21/Song')
+                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/vusaliw')
                 ]
             ]
         )
@@ -50,12 +50,12 @@ def help(client, message):
         quote=False,
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇹🇷 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🇹🇷', url=f'http://t.me/StarSongBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/MusiqiYuklemeBot?startgroup=new}'),
                   ],[
-                    InlineKeyboardButton('✅ 𝖣𝖾𝗌𝗍𝖾𝗄', url=f'https://t.me/{Config.GROUP}'),
+                    InlineKeyboardButton('✅ Dəsdək', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅', url=f'https://t.me/{Config.PLAYLIST_NAME}')
                   ],[
-                    InlineKeyboardButton('🧑🏻‍💻 ɢɪᴛʜᴜʙ ᴋᴀʏɴᴀᴋ ᴋᴏᴅᴜ 🧑🏻‍💻', url=f'https://github.com/MehmetAtes21/Song')
+                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/vusaliw')
                 ]
             ]
         )
