@@ -26,7 +26,7 @@ bot = Client(
 async def start_(client: Client, message: Message):
     await message.reply_sticker("CAACAgQAAxkBAAI8bmKIvgnlJyCrq9HIxSvCZCbm5CEjAAIaEAACpvFxHg-Z648-SCRWJAQ")
     await message.reply_text(
-    f"""● **Selam** {message.from_user.mention}\n\n**» Ben müzik indirme botuyum istediğin müziği indirebilirim**\n\n**✅ Yardım için** /help **komutunu kullanın**""",
+    f"""● **Salam 👋** {message.from_user.mention}\n\n**» Mən Mahnı Yükləmə botuyam isdədiyin mahnını yükləyə bilərəm**\n\n**✅ kömək üçün** /komek **komutuna bas**""",
         reply_markup=InlineKeyboardMarkup(
             [[
                     InlineKeyboardButton('🇹🇷 𝖡𝖾𝗇𝗂 𝖦𝗋𝗎𝖻𝖺 𝖤𝗄𝗅𝖾 🇹🇷', url=f'http://t.me/StarSongBot?startgroup=new}'),
@@ -42,9 +42,9 @@ async def start_(client: Client, message: Message):
     
 #yardım mesajı
 
-@bot.on_message(filters.command(['help']))
+@bot.on_message(filters.command(['komek']))
 def help(client, message):
-    helptext = f'• **Müzik indirmek için /bul komutunu kullabilirsin .**\n\n**Örnek** :\n•> /bul `gece mavisi`'
+    helptext = f'• **Mahnı Yükləmək üçün /mahni komutunu işlədə bilərsən .**\n\n**Məs.** :\n•> /mahni `Mir Yusif - Ağ təyyarə.`'
     message.reply_text(
         text=helptext, 
         quote=False,
@@ -64,11 +64,11 @@ def help(client, message):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`Merhaba Sahip Bey 🖤`')
+    livemsg = await message.reply_text('`Salam Sahib Bəy, 🖤`')
     
 #musik indirme#
 
-@bot.on_message(filters.command("bul") & ~filters.edited)
+@bot.on_message(filters.command("mahni") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
     m = message.reply("<b>• **Şarkın Aranıyor** ...</b>")
@@ -84,10 +84,10 @@ def bul(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit("<b>⛔ **Üzgünüm şarkı bulunamadı.\n\n Lütfen başka şarkı ismi söyleyin.**</b>")
+        m.edit("<b>⛔ **Bağışla mahnı tapılmadı.\n\n xahiş başka mahnı adş yazın.**</b>")
         print(str(e))
         return
-    m.edit("<b>•> **İndirme Başladı...**</b>")
+    m.edit("<b>•> **Yükləmə Başladı...**</b>")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -103,7 +103,7 @@ def bul(_, message):
         m.delete()
         bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=rep, performer="@mutsuz_panda", parse_mode='md', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
-        m.edit("<b>⛔ **Hatanın düzelmesini bekleyin** .</b>")
+        m.edit("<b>⛔ **Xətanın düzəlməsini gözləyin** .</b>")
         print(e)
 
     try:
