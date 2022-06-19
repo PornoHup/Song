@@ -29,12 +29,12 @@ async def start_(client: Client, message: Message):
     f"""● **Salam 👋** {message.from_user.mention}\n\n**» Mən Mahnı Yükləmə botuyam isdədiyin mahnını yükləyə bilərəm**\n\n**✅ kömək üçün** /komek **komutuna bas**""",
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/MusiqiYuklemeBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/AzeSongBot?startgroup=new}'),
                   ],[
                     InlineKeyboardButton('✅ Dəsdək ', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅 ', url=f'https://t.me/{Config.PLAYLIST_NAME}')
                   ],[
-                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/vusaliw')
+                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/Thagiyevvvv')
                 ]
             ]
         )
@@ -50,12 +50,12 @@ def help(client, message):
         quote=False,
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/MusiqiYuklemeBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/AzeSongBot?startgroup=new}'),
                   ],[
                     InlineKeyboardButton('✅ Dəsdək', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅', url=f'https://t.me/{Config.PLAYLIST_NAME}')
                   ],[
-                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/vusaliw')
+                    InlineKeyboardButton('🧑🏻‍💻 Developer 🧑🏻‍💻', url=f'https://t.me/Thagiyevvvv')
                 ]
             ]
         )
@@ -64,14 +64,14 @@ def help(client, message):
 
 @bot.on_message(filters.command("alive") & filters.user(Config.BOT_OWNER))
 async def live(client: Client, message: Message):
-    livemsg = await message.reply_text('`Salam Sahib Bəy, 🖤`')
+    livemsg = await message.reply_text('`Salam Sahib Bəy, 🐊👑`')
     
 #musik indirme#
 
 @bot.on_message(filters.command("mahni") & ~filters.edited)
 def bul(_, message):
     query = " ".join(message.command[1:])
-    m = message.reply("<b>• **Şarkın Aranıyor** ...</b>")
+    m = message.reply("<b>• **Mahnın Axtarılır** ...</b>")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -93,7 +93,7 @@ def bul(_, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"🎵 𝐘𝐮̈𝐤𝐥𝐞𝐝𝐢 [𝐌𝐮𝐬𝐢𝐜 𝐁𝐨𝐭](https://t.me/{Config.BOT_USERNAME})"
+        rep = f"🎵 𝐘𝐮̈𝐤𝐥𝐞𝐝𝐢 [Aze song](https://t.me/{Config.BOT_USERNAME})"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
