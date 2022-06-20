@@ -29,7 +29,7 @@ async def start_(client: Client, message: Message):
     f"""● **Salam 👋** {message.from_user.mention}\n\n**» Mən Mahnı Yükləmə botuyam isdədiyin mahnını yükləyə bilərəm**\n\n**✅ kömək üçün** /komek **komutuna bas**""",
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/AzeSongBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/azesongBot?startgroup=new}'),
                   ],[
                     InlineKeyboardButton('✅ Dəsdək ', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅 ', url=f'https://t.me/{Config.PLAYLIST_NAME}')
@@ -50,7 +50,7 @@ def help(client, message):
         quote=False,
         reply_markup=InlineKeyboardMarkup(
             [[
-                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/AzeSongBot?startgroup=new}'),
+                    InlineKeyboardButton('🇦🇿 MƏni Qrupa Əlavə Et 🇹🇷', url=f'http://t.me/azesongBot?startgroup=new}'),
                   ],[
                     InlineKeyboardButton('✅ Dəsdək', url=f'https://t.me/{Config.GROUP}'),
                     InlineKeyboardButton('⏳ 𝖪𝖺𝗇𝖺𝗅', url=f'https://t.me/{Config.PLAYLIST_NAME}')
